@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 
-const WeatherCard = () => {
+const WeatherCard = (props) => {
   // const [weather, setWeather] = useState([]);
   const [temp, setTemp] = useState(0);
   const [time, setTime] = useState("");
+  // const [city, setCity] = useState("");
 
   const API_ENDPOINT = "http://api.openweathermap.org/data/2.5/forecast";
   const city = "Tokyo";
@@ -34,7 +35,7 @@ const WeatherCard = () => {
 
   return (
     <div className="weather-wrap">
-      <p className="weather">{city}</p>
+      <p className="weather">{props.value}</p>
       <p className="temperature">{temp}℃</p>
       <time className="datetime">{time}</time>
     </div>

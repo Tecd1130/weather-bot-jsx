@@ -1,22 +1,24 @@
-import React, { useState, useCallback } from "react";
+import React, { useState } from "react";
 import { Header, CitySelect, WeatherCard } from "./components/index";
 
 import "./assets/css/reset.css";
 import "./assets/css/style.scss";
 
 const App = () => {
-  const [weather, setWeather] = useState([]);
-  const [city, setCity] = useState("");
+  // const [weather, setWeather] = useState([]);
+  // const [city, setCity] = useState("");
+  const [value, setValue] = useState("");
 
-  const handleCity = useCallback(() => {
-    setCity("test");
-  }, [setCity]);
+  const handleChange = (event) => {
+    setValue(event.target.value);
+    console.log(value);
+  };
 
   return (
     <div>
       <Header></Header>
-      <CitySelect city={city}></CitySelect>
-      <WeatherCard></WeatherCard>
+      <CitySelect value={value} handleChange={handleChange}></CitySelect>
+      <WeatherCard value={value}></WeatherCard>
     </div>
   );
 };
