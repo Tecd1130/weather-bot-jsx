@@ -9,10 +9,12 @@ const CitySelect = (props) => {
         value={props.value}
         onChange={props.handleChange}
       >
-        <option value="">地域を選択してください</option>
-        <option value="墨田区">墨田区</option>
-        <option value="江東区">江東区</option>
-        <option value="台東区">台東区</option>
+        <option disabled selected value="">
+          地域を選択してください
+        </option>
+        <option value="東京都">東京</option>
+        <option value="大阪府">大阪</option>
+        <option value="札幌市">札幌</option>
       </select>
     </div>
   );
