@@ -38,6 +38,12 @@ header {
   font-weight: bold;
 }
 
+.weather-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .temperature {
   margin-top: 20px;
   font-size: 20px;
