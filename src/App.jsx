@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Header, CitySelect, WeatherCard } from "./components/index";
+import { Header, CitySelect, WeatherCard, PushSlack } from "./components/index";
 
 import "./assets/css/reset.css";
 import "./assets/css/style.scss";
@@ -21,6 +21,7 @@ const App = () => {
       <CitySelect value={value} handleChange={handleChange}></CitySelect>
       <div className="show" style={{ display: open ? "block" : "none" }}>
         <WeatherCard value={value}></WeatherCard>
+        <PushSlack value={value}></PushSlack>
       </div>
     </div>
   );
